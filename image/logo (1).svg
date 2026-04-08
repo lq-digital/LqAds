@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="194.377" height="77.443" viewBox="0 0 194.377 77.443">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_189" data-name="Rectangle 189" width="194.377" height="77.443" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_190" data-name="Rectangle 190" width="194.377" height="77.443" fill="#6b00ff"/>
+    </clipPath>
+  </defs>
+  <g id="Group_363" data-name="Group 363" transform="translate(0 0.001)">
+    <g id="Group_261" data-name="Group 261" transform="translate(0 -0.001)">
+      <g id="Group_260" data-name="Group 260" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <path id="Path_242" data-name="Path 242" d="M57.629,130.723l-2.819,2.228a1.037,1.037,0,0,1-1.456-.17L48.7,126.889a1.056,1.056,0,0,0-.836-.394h-.005A31.738,31.738,0,0,1,20.133,79.3a1.037,1.037,0,0,0-.9-1.552H1.037A1.037,1.037,0,0,0,0,78.781v60.5a1.037,1.037,0,0,0,1.037,1.037h60.5a1.037,1.037,0,0,0,1.037-1.037V124.539a1.037,1.037,0,0,0-1.478-.937,31.5,31.5,0,0,1-4.6,1.693,1.036,1.036,0,0,0-.54,1.64l1.843,2.331a1.037,1.037,0,0,1-.17,1.456" transform="translate(0 -72.258)" fill="#b871ff"/>
+      </g>
+    </g>
+    <text id="Lang" transform="translate(71.117 31.594)" fill="#6b00ff" font-size="37" font-family="Helvetica"><tspan x="0" y="0" letter-spacing="0.01em">L</tspan><tspan y="0">ang</tspan></text>
+    <g id="Group_263" data-name="Group 263" transform="translate(0 -0.001)">
+      <g id="Group_262" data-name="Group 262" transform="translate(0 0)" clip-path="url(#clip-path-2)">
+        <text id="Quang" transform="translate(71.117 65.761)" fill="#6b00ff" font-size="37" font-family="Helvetica"><tspan x="0" y="0">Quang</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
