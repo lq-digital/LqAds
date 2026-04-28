@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facebook Ads Connector for Looker Studio - LQ Analytics</title>
+  <meta name="description"
+    content="Securely import your Facebook Ads data into Looker Studio. Access impressions, clicks, spend, conversions, ROAS and more in real time." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #1877F2;
+      --primary-dark: #0e5a8a;
+      --primary-soft: #e7f3ff;
+      --text-main: #1c1e21;
+      --text-light: #606770;
+      --bg-gray: #f0f2f5;
+      --white: #ffffff;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      --radius: 12px;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: var(--text-main);
+      background-color: var(--white);
+    }
+
+    /* --- Navigation --- */
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0.8rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 24px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-light);
+      margin-left: 24px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .btn-cta {
+      background: var(--primary);
+      color: white !important;
+      padding: 8px 18px;
+      border-radius: 6px;
+      margin-left: 24px;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      background: linear-gradient(180deg, var(--primary-soft) 0%, var(--white) 100%);
+      padding: 100px 24px 60px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+      color: #050505;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      color: var(--text-light);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    /* --- Feature Cards --- */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin: 40px 0;
+    }
+
+    .card {
+      background: #fafafa;
+      padding: 40px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin-bottom: 20px;
+      color: var(--text-main);
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card h3::before {
+      content: "";
+      width: 4px;
+      height: 20px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .card li {
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 25px;
+      font-size: 1rem;
+      color: var(--text-light);
+    }
+
+    .card li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: 900;
+    }
+
+    /* --- Info Banner --- */
+    .info-banner {
+      background: #f8faff;
+      color: #0e5a8a;
+      padding: 24px 30px;
+      border-radius: var(--radius);
+      margin: 60px 0;
+      border-left: 5px solid var(--primary);
+      box-shadow: 0 2px 8px rgba(24, 119, 242, 0.05);
+    }
+
+    /* --- Setup Steps --- */
+    .setup-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    .setup-box h2 {
+      margin-bottom: 30px;
+      font-size: 1.8rem;
+    }
+
+    .setup-steps {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+    }
+
+    .setup-steps li {
+      counter-increment: step;
+      position: relative;
+      padding-left: 50px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      min-height: 40px;
+    }
+
+    .setup-steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      width: 32px;
+      height: 32px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    /* --- Support Link --- */
+    .support-footer {
+      margin-top: 80px;
+      text-align: center;
+      padding: 40px;
+      background: var(--bg-gray);
+      border-radius: var(--radius);
+    }
+
+    .support-footer h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .email-link {
+      font-size: 1.3rem;
+      color: var(--primary);
+      display: block;
+      margin-top: 15px;
+      font-weight: 700;
+    }
+
+    /* --- Link Colors --- */
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 80px 24px 40px;
+      margin-top: 100px;
+    }
+
+    .footer-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-logo img {
+      filter: brightness(0) invert(1);
+      margin-bottom: 20px;
+    }
+
+    .footer-links h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .copyright-area {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 1px solid #333;
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .nav-links a:not(.btn-cta) {
+        display: none;
+      }
+
+      .hero {
+        padding: 60px 20px;
+      }
+
+      .setup-box {
+        padding: 24px;
+      }
+
+      .card {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <a href="/" class="logo">
+        <img src="/image/langquang.png" alt="LQ Analytics Logo" height="40" width="auto">
+      </a>
+      <div class="nav-links">
+        <a href="/facebook-ads-connector/">Facebook Ads Connector</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/support/">Support</a>
+        <a href="/contact" class="btn-cta">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Facebook Ads Connector</h1>
+    <p>The <strong>LQ Analytics Facebook Ads Connector</strong> lets you securely bring your Facebook (Meta) Ads
+      performance data directly into Looker Studio to create powerful custom dashboards and reports.</p>
+  </header>
+
+  <div class="container">
+
+    <div class="features-grid">
+      <div class="card">
+        <h3>Key Features</h3>
+        <ul>
+          <li>Real-time & historical data</li>
+          <li>Metrics: Impressions, ROAS, CPC, Spend</li>
+          <li>Multi-account & Campaign support</li>
+          <li>Secure OAuth 2.0 Auth</li>
+          <li>Safe, Read-only access</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Requirements</h3>
+        <ul>
+          <li>Google account (Looker Studio)</li>
+          <li>Facebook Ads Account access</li>
+          <li>Ad performance permissions</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-banner">
+      <strong>No Separate Account Required:</strong> You do <b>not</b> need to create an account on our website. Simply
+      authorize using your existing Google and Facebook credentials during setup.
+    </div>
+
+    <section class="setup-box">
+      <h2>How to Set Up</h2>
+      <ol class="setup-steps">
+        <li>Open <a href="https://lookerstudio.google.com/" target="_blank">Looker Studio</a></li>
+        <li>Click <strong>Add Data</strong> → <strong>Data Source</strong></li>
+        <li>Search for "<strong>Facebook Ads Analytics (LQ Analytics)</strong>"</li>
+        <li>Sign in with your Google account</li>
+        <li>Authorize your Facebook Business Manager or Ad Account</li>
+        <li>Select the Ad Account(s) you want to connect</li>
+        <li>Click <strong>Connect</strong> and start visualizing</li>
+      </ol>
+    </section>
+
+    <div class="support-footer">
+      <h2>Need Help?</h2>
+      <p>If you encounter any issues, please visit our <a href="/support/">Support page</a> or contact us at:</p>
+      <a href="mailto:analytics.lq.digital@gmail.com" class="email-link">analytics.lq.digital@gmail.com</a>
+    </div>
+
+    <p style="margin-top:80px; text-align:center; font-size:0.85rem; color: var(--text-light);">
+      Developed and maintained by <strong>LangQuang Digital (LQ Analytics)</strong>.<br>
+      By using this connector, you agree to our
+      <a href="/privacy-policy/">Privacy Policy</a> and
+      <a href="/terms/">Terms of Use</a>.
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <img src="/image/langquang.png" alt="LQ Analytics Logo" height="40" width="auto" />
+        </div>
+        <p style="font-size: 0.9rem; line-height: 1.4;">
+          Brisbane's leading digital partner for branding, development, and strategic growth.
+        </p>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/facebook-ads-connector/">Facebook Ads Connector</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms of Use</a></li>
+          <li><a href="/support/">Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="/contact/">Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright-area">
+      <p style="margin-bottom: 10px;">This connector is developed and maintained by LangQuang Digital (LQ Analytics)</p>
+      © 2026 LangQuang Digital. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -4,115 +4,234 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms of Use | LQ Analytics</title>
-  <link rel="stylesheet" href="/css/styles.css" />
+  <style>
+    :root {
+      --primary: #1877F2;
+      --text-dark: #1c1e21;
+      --text-muted: #606770;
+      --bg-light: #f8f9fa;
+      --border: #e5e7eb;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body { 
+      font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+      line-height: 1.6; 
+      color: var(--text-dark);
+      background-color: var(--white);
+    }
+
+    /* --- Navigation --- */
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 24px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      margin-left: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .btn-cta {
+      background: var(--primary);
+      color: white !important;
+      padding: 8px 16px;
+      border-radius: 6px;
+    }
+
+    /* --- Content Layout --- */
+    .legal-header {
+      background: var(--bg-light);
+      padding: 60px 24px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .legal-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    .last-updated { color: var(--text-muted); font-size: 0.9rem; }
+
+    .container {
+      max-width: 1000px;
+      margin: 60px auto;
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 60px;
+      padding: 0 24px;
+    }
+
+    /* --- Sidebar Nav --- */
+    .sidebar { position: sticky; top: 100px; height: fit-content; }
+    .sidebar h4 { margin-bottom: 15px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); }
+    .sidebar ul { list-style: none; }
+    .sidebar li { margin-bottom: 10px; }
+    .sidebar a { text-decoration: none; color: var(--text-muted); font-size: 0.95rem; transition: 0.2s; }
+    .sidebar a:hover { color: var(--primary); }
+
+    /* --- Main Content --- */
+    .content h2 { 
+      font-size: 1.5rem; 
+      margin: 40px 0 15px; 
+      color: #000; 
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--bg-light);
+    }
+    .content p { margin-bottom: 20px; color: #444; }
+    .content ul { margin-bottom: 20px; padding-left: 20px; }
+    .content li { margin-bottom: 10px; color: #444; }
+
+    /* --- Footer --- */
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 80px 24px 40px;
+      margin-top: 100px;
+    }
+    .footer-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+    .footer-logo img { filter: brightness(0) invert(1); margin-bottom: 20px; }
+    .footer-links h4 { color: white; margin-bottom: 20px; }
+    .footer-links ul { list-style: none; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a { color: #ccc; text-decoration: none; font-size: 0.9rem; }
+    .footer-links a:hover { color: white; }
+
+    @media (max-width: 768px) {
+      .container { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
 </head>
 <body>
+
 <nav>
-      <div class="nav-container ">
-        <a href="/" class="logo">
-          <img src="../image/langquang.png" alt="LQ Analytics Logo"             height="50px"
-            width="130px" />
-        </a>
+  <div class="nav-container">
+    <a href="/" class="logo">
+      <img src="../image/langquang.png" alt="LQ Analytics Logo" height="40" width="auto" />
+    </a>
+    <div class="nav-links">
+      <a href="/facebook-ads-connector/">Facebook Ads Connector</a>
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <a href="/terms/">Terms</a>
+      <a href="/support/">Support</a>
+      <a href="/contact" class="btn-cta">Contact</a>
+    </div>
+  </div>
+</nav>
 
-
-          <div class="nav-links">
-          <a href="/connector/">Connector</a>
-          <a href="/privacy-policy/">Privacy Policy</a>
-          <a href="/terms/">Terms</a>
-          <a href="/support/">Support</a>
-          <a href="/contact" class="btn-cta">Contact</a>
-        </div>
-      </div>
-    </nav>
-<main class="container" style="max-width: 900px; margin: 100px auto;" >
-    <div style="margin-top: 100px;">
+<header class="legal-header">
   <h1>Terms of Use</h1>
+  <p class="last-updated">Last Updated: January 2026</p>
+</header>
 
-  <p style="margin-bottom:20px">Welcome to LQ Analytics. By accessing or using our services, you agree to be bound by the following Terms of Use.</p>
+<main class="container">
+  <aside class="sidebar">
+    <h4>Legal Navigation</h4>
+    <ul>
+      <li><a href="#acceptance">1. Acceptance</a></li>
+      <li><a href="#service">2. Service Description</a></li>
+      <li><a href="#responsibilities">3. Responsibilities</a></li>
+      <li><a href="#connector">4. Connector Use</a></li>
+      <li><a href="#privacy">5. Privacy</a></li>
+      <li><a href="#liability">6. Liability</a></li>
+    </ul>
+  </aside>
 
-  <h2>1. Acceptance of Terms</h2>
-  <p style="margin-bottom:20px">By using our website and connector services, you agree to comply with these Terms. If you do not agree, please do not use our services.</p>
+  <div class="content">
+    <p>Welcome to LQ Analytics. By accessing or using our services, you agree to be bound by the following Terms of Use.</p>
 
-  <h2>2. Description of Service</h2>
-  <p style="margin-bottom:20px">LQ Analytics provides digital marketing services and data connectors that allow users to integrate third-party platforms with reporting tools such as Looker Studio.</p>
+    <h2 id="acceptance">1. Acceptance of Terms</h2>
+    <p>By using our website and connector services, you agree to comply with these Terms. If you do not agree, please do not use our services.</p>
 
-  <h2>3. User Responsibilities</h2>
-  <ul>
-    <li>You must provide accurate and complete information when using our services.</li>
-    <li>You are responsible for maintaining the confidentiality of your account and credentials.</li>
-    <li>You agree not to misuse or attempt to disrupt our services.</li>
-  </ul>
+    <h2 id="service">2. Description of Service</h2>
+    <p>LQ Analytics provides digital marketing services and data connectors that allow users to integrate third-party platforms with reporting tools such as Looker Studio.</p>
 
-  <h2>4. Use of Connector</h2>
-  <p style="margin-bottom:20px">Our connector services may require authorization via third-party platforms. You agree to grant only the necessary permissions required for functionality.</p>
+    <h2 id="responsibilities">3. User Responsibilities</h2>
+    <ul>
+      <li>You must provide accurate and complete information when using our services.</li>
+      <li>You are responsible for maintaining the confidentiality of your account and credentials.</li>
+      <li>You agree not to misuse or attempt to disrupt our services.</li>
+    </ul>
 
-  <h2>5. Data and Privacy</h2>
-  <p style="margin-bottom:20px">Your use of our services is also governed by our Privacy Policy. Please review it to understand how we collect and use data.</p>
+    <h2 id="connector">4. Use of Connector</h2>
+    <p>Our connector services may require authorization via third-party platforms. You agree to grant only the necessary permissions required for functionality.</p>
 
-  <h2>6. Limitations of Liability</h2>
-  <p style="margin-bottom:20px">We are not liable for any indirect, incidental, or consequential damages resulting from the use or inability to use our services.</p>
+    <h2 id="privacy">5. Data and Privacy</h2>
+    <p>Your use of our services is also governed by our <a href="/privacy-policy/">Privacy Policy</a>. Please review it to understand how we collect and use data.</p>
 
-  <h2>7. Service Availability</h2>
-  <p style="margin-bottom:20px">We strive to maintain continuous availability but do not guarantee uninterrupted service. Maintenance or updates may cause temporary downtime.</p>
+    <h2 id="liability">6. Limitations of Liability</h2>
+    <p>We are not liable for any indirect, incidental, or consequential damages resulting from the use or inability to use our services.</p>
 
-  <h2>8. Changes to Terms</h2>
-  <p style="margin-bottom:20px">We reserve the right to update these Terms at any time. Continued use of the service constitutes acceptance of the updated Terms.</p>
+    <h2 id="availability">7. Service Availability</h2>
+    <p>We strive to maintain continuous availability but do not guarantee uninterrupted service. Maintenance or updates may cause temporary downtime.</p>
 
-  <h2>9. Contact Us</h2>
-  <p style="margin-bottom:20px">If you have any questions about these Terms, please contact us at:</p>
-  <p style="margin-bottom:20px"><strong>analytics.lq.digital@gmail.com</strong></p>
+    <h2 id="changes">8. Changes to Terms</h2>
+    <p>We reserve the right to update these Terms at any time. Continued use of the service constitutes acceptance of the updated Terms.</p>
+
+    <h2 id="contact">9. Contact Us</h2>
+    <p>If you have any questions about these Terms, please contact us at:</p>
+    <p><strong><a href="mailto:analytics.lq.digital@gmail.com">analytics.lq.digital@gmail.com</a></strong></p>
   </div>
 </main>
 
-        <footer>
-
-      <div class="footer-grid">
-        <div>
-          <div class="footer-logo">
-            <img src="../image/langquang.png" alt="LQ Analytics Logo"  height="50px"
-            width="130px"/> 
-          </div>
-          <p>
-            Brisbane's leading digital partner for branding, development, and
-            strategic growth.
-          </p>
-        </div>
-        <div class="footer-links">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="/connector/">Connector</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="/privacy-policy/">Privacy Policy</a></li>
-            <li><a href="/terms/">Terms of Use</a></li>
-            <li><a href="/support/">Support</a></li>
-          </ul>
-        </div>
-           <div class="footer-links">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="/contact/">Contact us</a></li>
-
-          </ul>
-        </div>
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">
+        <img src="../image/langquang.png" alt="LQ Analytics Logo" height="40" width="auto"/> 
       </div>
-            <p style="text-align:center; margin-top:20px;">
-This connector is developed and maintained by LangQuang Digital (LQ Analytics)
-</p>
-      <div
-        style="
-          text-align: center;
-          margin-top: 60px;
-          padding-top: 30px;
-          border-top: 1px solid #222;
-          font-size: 0.8rem;
-        "
-      >
-        © 2026 LangQuang Digital. All rights reserved.
-      </div>
-    </footer>
+      <p style="font-size: 0.9rem; line-height: 1.4;">
+        Brisbane's leading digital partner for branding, development, and strategic growth.
+      </p>
+    </div>
+    <div class="footer-links">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="/facebook-ads-connector/">Facebook Ads Connector</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/terms/">Terms of Use</a></li>
+        <li><a href="/support/">Support</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="/contact/">Contact us</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div style="text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #333; font-size: 0.8rem; color: #888;">
+    <p style="margin-bottom: 10px;">This connector is developed and maintained by LangQuang Digital (LQ Analytics)</p>
+    © 2026 LangQuang Digital. All rights reserved.
+  </div>
+</footer>
+
 </body>
 </html>

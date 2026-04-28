@@ -4,18 +4,179 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Support | LQ Analytics</title>
-  <link rel="stylesheet" href="/css/styles.css" />
+  <style>
+    :root {
+      --primary: #1877F2;
+      --primary-soft: #e7f3ff;
+      --text-dark: #1c1e21;
+      --text-muted: #606770;
+      --bg-light: #f0f2f5;
+      --border: #e5e7eb;
+      --white: #ffffff;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body { 
+      font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+      line-height: 1.6; 
+      color: var(--text-dark);
+      background-color: var(--white);
+    }
+
+    /* --- Navigation --- */
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 24px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      margin-left: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .btn-cta {
+      background: var(--primary);
+      color: white !important;
+      padding: 8px 18px;
+      border-radius: 6px;
+    }
+
+    /* --- Support Hero --- */
+    .support-hero {
+      background: linear-gradient(180deg, var(--primary-soft) 0%, var(--white) 100%);
+      padding: 80px 24px;
+      text-align: center;
+    }
+    .support-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 15px; }
+    .support-hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
+
+    /* --- Troubleshooting Sections --- */
+    h2 { 
+      font-size: 1.75rem; 
+      margin: 50px 0 20px; 
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 24px;
+      background: var(--primary);
+      border-radius: 4px;
+    }
+
+    /* --- Step list --- */
+    .setup-steps { list-style: none; counter-reset: my-counter; margin-bottom: 40px; }
+    .setup-steps li {
+      counter-increment: my-counter;
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.02);
+    }
+    .setup-steps li::before {
+      content: counter(my-counter);
+      background: var(--primary);
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-weight: bold;
+      font-size: 0.85rem;
+    }
+
+    /* --- Issue Cards --- */
+    .issue-list { list-style: none; display: grid; gap: 15px; }
+    .issue-item {
+      padding: 20px;
+      border-radius: 10px;
+      background: #fafafa;
+      border-left: 4px solid #ddd;
+    }
+    .issue-item strong { color: var(--primary); display: block; margin-bottom: 5px; }
+
+    /* --- Contact Box --- */
+    .contact-card {
+      background: var(--primary);
+      color: white;
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .contact-card h2 { color: white; justify-content: center; margin-top: 0; }
+    .contact-card h2::before { display: none; }
+    .contact-card a { color: white; text-decoration: underline; font-size: 1.4rem; font-weight: bold; }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      margin-top: 15px;
+    }
+
+    /* --- Footer --- */
+    footer { background: #111; color: #ccc; padding: 80px 24px 40px; margin-top: 100px; }
+    .footer-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+    .footer-logo img { filter: brightness(0) invert(1); margin-bottom: 20px; }
+    .footer-links h4 { color: white; margin-bottom: 20px; font-size: 1rem; }
+    .footer-links ul { list-style: none; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a { color: #ccc; text-decoration: none; font-size: 0.9rem; transition: 0.2s; }
+    .footer-links a:hover { color: white; }
+
+    @media (max-width: 768px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+      .support-hero h1 { font-size: 2.2rem; }
+    }
+  </style>
 </head>
 <body>
   <nav>
       <div class="nav-container">
         <a href="/" class="logo">
-          <img src="../image/langquang.png" alt="LQ Analytics Logo"             height="50px"
-            width="130px"/>
+          <img src="../image/langquang.png" alt="LQ Analytics Logo" height="40" width="auto"/>
         </a>
-
         <div class="nav-links">
-          <a href="/connector/">Connector</a>
+          <a href="/facebook-ads-connector/">Facebook Ads Connector</a>
           <a href="/privacy-policy/">Privacy Policy</a>
           <a href="/terms/">Terms</a>
           <a href="/support/">Support</a>
@@ -24,14 +185,14 @@
       </div>
     </nav>
 
-<main class="container" style="max-width: 900px; margin: 100px auto;">
-    <div style="margin-top: 100px;">
-  <h1>Support</h1>
+<header class="support-hero">
+  <h1>Support Center</h1>
+  <p>How can we help you today? Review our quick-start guide or troubleshoot common connector issues.</p>
+</header>
 
-  <p style="margin-bottom:20px">If you need help using our connector or services, please review the information below or contact us.</p>
-
-  <h2 >Getting Started</h2>
-  <ol style="margin-bottom:20px">
+<main class="container">
+  <h2>Getting Started</h2>
+  <ol class="setup-steps">
     <li>Open Looker Studio</li>
     <li>Select “Add Data Source”</li>
     <li>Choose the LQ Analytics connector</li>
@@ -40,78 +201,70 @@
   </ol>
 
   <h2>Common Issues</h2>
-  <ul style="margin-bottom:20px">
-    <li>Authentication errors: Ensure you are logged into the correct account</li>
-    <li>No data loading: Check your API permissions and data source connection</li>
-    <li>Access issues: Verify account permissions and credentials</li>
-  </ul>
-
-  <h2>Connector Help</h2>
-  <p>If the connector fails to load or return data:</p>
-  <ul style="margin-bottom:20px">
-    <li>Re-authenticate your account</li>
-    <li>Check if your data source is active</li>
-    <li>Ensure you have granted the required permissions</li>
-  </ul>
-
-  <h2>Contact Support</h2>
-  <p>For further assistance, please contact us:</p>
-  <p><strong>Email:</strong> analytics.lq.digital@gmail.com</p>
-
-  <h2>Response Time</h2>
-  <p>We aim to respond to support requests within 24–48 hours.</p>
+  <div class="issue-list">
+    <div class="issue-item">
+      <strong>Authentication errors</strong> Ensure you are logged into the correct Google and Meta accounts.
+    </div>
+    <div class="issue-item">
+      <strong>No data loading</strong> Check your API permissions and ensure the selected Ad Account has active data.
+    </div>
+    <div class="issue-item">
+      <strong>Access issues</strong> Verify that your user role in Facebook Business Manager has "View Performance" access.
+    </div>
   </div>
+
+  <h2>Connector Troubleshooting</h2>
+  <p style="margin-bottom: 15px;">If the connector fails to load or return data, try these steps:</p>
+  <ul class="issue-list">
+    <li class="issue-item">Re-authenticate your account within the Looker Studio data source settings.</li>
+    <li class="issue-item">Check if your data source is active and not disabled by a manager.</li>
+    <li class="issue-item">Ensure you have granted all requested permissions during the OAuth popup.</li>
+  </ul>
+
+  <section class="contact-card">
+    <h2>Contact Support</h2>
+    <p>For technical assistance, please reach out via email:</p>
+    <p style="margin: 15px 0;"><a href="mailto:analytics.lq.digital@gmail.com">analytics.lq.digital@gmail.com</a></p>
+    <div class="badge">Average Response: 24–48 hours</div>
+  </section>
 </main>
 
-        <footer>
-
-      <div class="footer-grid">
-        <div>
-          <div class="footer-logo">
-            <img src="../image/langquang.png" alt="LQ Analytics Logo"             height="50px"
-            width="130px"/> 
-          </div>
-          <p>
-            Brisbane's leading digital partner for branding, development, and
-            strategic growth.
-          </p>
-        </div>
-        <div class="footer-links">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="/connector/">Connector</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="/privacy-policy/">Privacy Policy</a></li>
-            <li><a href="/terms/">Terms of Use</a></li>
-            <li><a href="/support/">Support</a></li>
-          </ul>
-        </div>
-           <div class="footer-links">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="/contact/">Contact us</a></li>
-
-          </ul>
-        </div>
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">
+        <img src="../image/langquang.png" alt="LQ Analytics Logo" height="40" width="auto"/> 
       </div>
-            <p style="text-align:center; margin-top:20px;">
-This connector is developed and maintained by LangQuang Digital (LQ Analytics)
-</p>
-      <div
-        style="
-          text-align: center;
-          margin-top: 60px;
-          padding-top: 30px;
-          border-top: 1px solid #222;
-          font-size: 0.8rem;
-        "
-      >
-        © 2026 LangQuang Digital. All rights reserved.
-      </div>
-    </footer>
+      <p style="font-size: 0.9rem; line-height: 1.4;">
+        Brisbane's leading digital partner for branding, development, and strategic growth.
+      </p>
+    </div>
+    <div class="footer-links">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="/facebook-ads-connector/">Facebook Ads Connector</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/terms/">Terms of Use</a></li>
+        <li><a href="/support/">Support</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="/contact/">Contact us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #333; font-size: 0.8rem; color: #888;">
+    <p style="margin-bottom: 10px;">This connector is developed and maintained by LangQuang Digital (LQ Analytics)</p>
+    © 2026 LangQuang Digital. All rights reserved.
+  </div>
+</footer>
 </body>
 </html>
