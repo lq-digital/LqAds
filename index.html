@@ -29,6 +29,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/styles.css" />
+
+
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -41,6 +43,17 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+       <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+ 
+    <!-- Ambient Background -->
+    <div class="ambient">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+
     <nav>
       <div class="nav-container">
         <a href="/" class="logo">
@@ -53,7 +66,7 @@
         </a>
 
         <div class="nav-links">
-          <a href="/facebook-ads-connector/">Facebook Ads Connector</a>
+          <a href="facebook-ads-connector/">Facebook Ads Connector</a>
           <a href="/privacy-policy/">Privacy Policy</a>
           <a href="/terms/">Terms</a>
           <a href="/support/">Support</a>
@@ -63,367 +76,159 @@
     </nav>
 
     <div id="main-view" class="page-view">
-      <header class="hero">
-        <div class="container">
-          <h1>Data Studio Connector for Marketing Data</h1>
-          <p>
-            Connect platforms like Facebook Ads to Data Studio and build
-            real-time dashboards for better reporting and decision-making.
-          </p>
-          <div style="display: flex; gap: 15px; justify-content: center">
-            <a
-              href="/contact/"
-              class="btn-cta"
-              style="
-                background: transparent;
-                border: 2px solid var(--primary);
-                color: var(--primary) !important;
-              "
-              >Get In Touch</a
-            >
-          </div>
+ <header class="hero">
+        <div class="hero-eyebrow"><span></span> Brisbane's Leading Digital Partner</div>
+        <h1>Data Studio Connector<br>for <span class="highlight">Marketing Data</span></h1>
+        <p>Connect platforms like Facebook Ads to Data Studio and build real-time dashboards for better reporting and decision-making.</p>
+        <div class="hero-ctas">
+          <a href="/contact/" class="btn-ghost">Get In Touch</a>
+        </div>
+        <div class="scroll-hint">
+          <div class="scroll-line"></div>
+          Scroll
         </div>
       </header>
-      <section id="connector" class="container">
-        <div class="section-header">
-          <h2>Data Studio Connector</h2>
-          <p>
-            Connect your marketing data directly to Data Studio for real-time
-            reporting and insights.
-          </p>
-        </div>
-
-        <div class="grid">
-          <div class="card">
-            <h3>📊 Supported Data Sources</h3>
-            <p>
-              Connect platforms such as Google Ads, Facebook Ads, and other
-              marketing tools.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>⚡ Real-Time Data</h3>
-            <p>
-              Automatically sync and update your data for accurate reporting.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>🔐 Secure Access</h3>
-            <p>
-              Authenticate safely using OAuth without sharing sensitive
-              credentials.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>📈 Custom Reporting</h3>
-            <p>
-              Build dashboards tailored to your business goals inside Data
-              Studio.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section
-        id="how-to-use"
-        style="
-          padding: 60px 20px;
-          font-family:
-            &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif;
-          color: #333;
-        "
-      >
-        <div style="text-align: center; margin-bottom: 40px">
-          <h2 style="font-size: 2.5rem; color: #320079; margin: 0">
-            How to Use the Connector
-          </h2>
-          <div
-            style="
-              width: 60px;
-              height: 4px;
-              background: #b871ff;
-              margin: 15px auto 0;
-            "
-          ></div>
-        </div>
-
-        <ol
-          style="
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0;
-            list-style: none;
-            counter-reset: steps;
-          "
-        >
-          <li
-            style="
-              counter-increment: steps;
-              position: relative;
-              padding: 20px 20px 20px 60px;
-              margin-bottom: 15px;
-              background: #ffffff;
-              border-radius: 12px;
-              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-              border: 1px solid #eee;
-            "
-          >
-            <span
-              style="
-                content: counter(steps);
-                position: absolute;
-                left: 15px;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 30px;
-                height: 30px;
-                background: #320079;
-                color: white;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-weight: bold;
-              "
-              >1</span
-            >
-            <strong>Open Data Studio:</strong> Navigate to your Data Studio
-            dashboard to begin.
-          </li>
-          <li
-            style="
-              counter-increment: steps;
-              position: relative;
-              padding: 20px 20px 20px 60px;
-              margin-bottom: 15px;
-              background: #ffffff;
-              border-radius: 12px;
-              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-              border: 1px solid #eee;
-            "
-          >
-            <span
-              style="
-                content: counter(steps);
-                position: absolute;
-                left: 15px;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 30px;
-                height: 30px;
-                background: #320079;
-                color: white;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-weight: bold;
-              "
-              >2</span
-            >
-            <strong>Add Data Source:</strong> Click the
-            <span style="color: #320079; font-weight: 600">“Create”</span>
-            button and select
-            <span style="color: #320079; font-weight: 600">“Data Source”</span>.
-          </li>
-          <li
-            style="
-              counter-increment: steps;
-              position: relative;
-              padding: 20px 20px 20px 60px;
-              margin-bottom: 15px;
-              background: #ffffff;
-              border-radius: 12px;
-              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-              border: 1px solid #eee;
-            "
-          >
-            <span
-              style="
-                content: counter(steps);
-                position: absolute;
-                left: 15px;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 30px;
-                height: 30px;
-                background: #320079;
-                color: white;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-weight: bold;
-              "
-              >3</span
-            >
-            <strong>Locate Connector:</strong> Search for and select
-            <span style="color: #320079; font-weight: 600"
-              >Facebook Ads (LQ Digital)</span
-            >
-            under the Partner Connectors section.
-          </li>
-          <li
-            style="
-              counter-increment: steps;
-              position: relative;
-              padding: 20px 20px 20px 60px;
-              margin-bottom: 15px;
-              background: #ffffff;
-              border-radius: 12px;
-              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-              border: 1px solid #eee;
-            "
-          >
-            <span
-              style="
-                content: counter(steps);
-                position: absolute;
-                left: 15px;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 30px;
-                height: 30px;
-                background: #320079;
-                color: white;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-weight: bold;
-              "
-              >4</span
-            >
-            <strong>Secure Authorization:</strong> Authorize your Google account
-            and Facebook Ads Business account to enable data flow.
-          </li>
-          <li
-            style="
-              counter-increment: steps;
-              position: relative;
-              padding: 20px 20px 20px 60px;
-              margin-bottom: 15px;
-              background: #ffffff;
-              border-radius: 12px;
-              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-              border: 1px solid #eee;
-            "
-          >
-            <span
-              style="
-                content: counter(steps);
-                position: absolute;
-                left: 15px;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 30px;
-                height: 30px;
-                background: #320079;
-                color: white;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-weight: bold;
-              "
-              >5</span
-            >
-            <strong>Build Your Report:</strong> Select your specific ad accounts
-            and start building your custom dashboard.
-          </li>
-        </ol>
-      </section>
-
-      <section
-        style="
-          background-color: #f9f9f9;
-          padding: 60px 20px;
-          font-family:
-            &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif;
-        "
-      >
-        <div style="max-width: 800px; margin: 0 auto; text-align: center">
-          <h2 style="font-size: 2rem; color: #320079; margin-bottom: 20px">
-            Requirements
-          </h2>
-          <p
-            style="
-              font-size: 1.1rem;
-              line-height: 1.6;
-              color: #555;
-              margin: 0 auto;
-              background: white;
-              padding: 30px;
-              border-radius: 12px;
-              border-top: 4px solid #b871ff;
-              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            "
-          >
-            To use this connector, you must have an active
-            <strong>Facebook Ads</strong> account with the necessary
-            administrative or analyst permissions to retrieve data. Ensure your
-            <strong>Google account</strong> has sufficient permissions to create
-            and manage data sources in Data Studio.
-          </p>
-        </div>
-      </section>
-      <section id="services" class="container">
-        <div class="section-header">
-          <h2>Smart Services That Deliver Real Impact</h2>
-          <p>
-            We blend creativity, strategy, and data to help your business grow
-            online.
-          </p>
-        </div>
-        <div class="grid">
-          <div class="card">
-            <span class="icon">🎨</span>
-            <h3>Creative Branding</h3>
-            <p>
-              Develop a strong visual identity that reflects your brand's story
-              and values. From logos to complete brand guidelines.
-            </p>
-          </div>
-          <div class="card">
-            <span class="icon">💻</span>
-            <h3>Web Development</h3>
-            <p>
-              Responsive, user-friendly websites built for performance and
-              scalability. We specialize in custom full-stack solutions.
-            </p>
-          </div>
-          <div class="card">
-            <span class="icon">📈</span>
-            <h3>SEO Solutions</h3>
-            <p>
-              Smart SEO strategies that help your brand get found online and
-              attract the right audience through organic search.
-            </p>
-          </div>
-          <div class="card">
-            <span class="icon">📊</span>
-            <h3>Custom Dashboards</h3>
-            <p>
-              Connect your data (Facebook Ads, Google Ads) to Data Studio for
-              real-time reporting and better decision making.
-            </p>
-          </div>
-          <div class="card">
-            <span class="icon">⚙️</span>
-            <h3>Automation Tools</h3>
-            <p>
-              Streamline your workflow with custom booking systems, CRM
-              integrations, and marketing automation.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="process" class="process-bg">
+ <section id="connector">
         <div class="container">
           <div class="section-header">
+            <div class="section-label">Data Studio</div>
+            <h2>Data Studio Connector</h2>
+            <p>Connect your marketing data directly to Data Studio for real-time reporting and insights.</p>
+          </div>
+          <div class="grid">
+            <div class="card" style="transition-delay:0s">
+              <span class="icon">📊</span>
+              <h3>Supported Data Sources</h3>
+              <p>Connect platforms such as Google Ads, Facebook Ads, and other marketing tools.</p>
+            </div>
+            <div class="card" style="transition-delay:0.1s">
+              <span class="icon">⚡</span>
+              <h3>Real-Time Data</h3>
+              <p>Automatically sync and update your data for accurate reporting.</p>
+            </div>
+            <div class="card" style="transition-delay:0.2s">
+              <span class="icon">🔐</span>
+              <h3>Secure Access</h3>
+              <p>Authenticate safely using OAuth without sharing sensitive credentials.</p>
+            </div>
+            <div class="card" style="transition-delay:0.3s">
+              <span class="icon">📈</span>
+              <h3>Custom Reporting</h3>
+              <p>Build dashboards tailored to your business goals inside Data Studio.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+ 
+      <div class="divider"></div>
+ 
+      <!-- HOW TO USE -->
+      <section id="how-to-use">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-label">Setup Guide</div>
+            <h2>How to Use the Connector</h2>
+          </div>
+          <div class="steps-list">
+            <div class="step-item" style="transition-delay:0s">
+              <div class="step-num">1</div>
+              <div class="step-text">
+                <strong>Open Data Studio</strong>
+                <span>Navigate to your Data Studio dashboard to begin.</span>
+              </div>
+            </div>
+            <div class="step-item" style="transition-delay:0.08s">
+              <div class="step-num">2</div>
+              <div class="step-text">
+                <strong>Add Data Source</strong>
+                <span>Click the <em>"Create"</em> button and select <em>"Data Source"</em>.</span>
+              </div>
+            </div>
+            <div class="step-item" style="transition-delay:0.16s">
+              <div class="step-num">3</div>
+              <div class="step-text">
+                <strong>Locate Connector</strong>
+                <span>Search for and select <em>Facebook Ads (LQ Digital)</em> under the Partner Connectors section.</span>
+              </div>
+            </div>
+            <div class="step-item" style="transition-delay:0.24s">
+              <div class="step-num">4</div>
+              <div class="step-text">
+                <strong>Secure Authorization</strong>
+                <span>Authorize your Google account and Facebook Ads Business account to enable data flow.</span>
+              </div>
+            </div>
+            <div class="step-item" style="transition-delay:0.32s">
+              <div class="step-num">5</div>
+              <div class="step-text">
+                <strong>Build Your Report</strong>
+                <span>Select your specific ad accounts and start building your custom dashboard.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+ 
+      <div class="divider"></div>
+ 
+      <!-- REQUIREMENTS -->
+      <section class="requirements-section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-label">Prerequisites</div>
+            <h2>Requirements</h2>
+          </div>
+          <div class="req-card">
+            To use this connector, you must have an active <strong>Facebook Ads</strong> account with the necessary administrative or analyst permissions to retrieve data. Ensure your <strong>Google account</strong> has sufficient permissions to create and manage data sources in Data Studio.
+          </div>
+        </div>
+      </section>
+ 
+      <div class="divider"></div>
+ 
+      <!-- SERVICES -->
+      <section id="services">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-label">What We Do</div>
+            <h2>Smart Services That Deliver Real Impact</h2>
+            <p>We blend creativity, strategy, and data to help your business grow online.</p>
+          </div>
+          <div class="grid">
+            <div class="card" style="transition-delay:0s">
+              <span class="icon">🎨</span>
+              <h3>Creative Branding</h3>
+              <p>Develop a strong visual identity that reflects your brand's story and values. From logos to complete brand guidelines.</p>
+            </div>
+            <div class="card" style="transition-delay:0.1s">
+              <span class="icon">💻</span>
+              <h3>Web Development</h3>
+              <p>Responsive, user-friendly websites built for performance and scalability. We specialize in custom full-stack solutions.</p>
+            </div>
+            <div class="card" style="transition-delay:0.2s">
+              <span class="icon">📈</span>
+              <h3>SEO Solutions</h3>
+              <p>Smart SEO strategies that help your brand get found online and attract the right audience through organic search.</p>
+            </div>
+            <div class="card" style="transition-delay:0.3s">
+              <span class="icon">📊</span>
+              <h3>Custom Dashboards</h3>
+              <p>Connect your data (Facebook Ads, Google Ads) to Data Studio for real-time reporting and better decision making.</p>
+            </div>
+            <div class="card" style="transition-delay:0.4s">
+              <span class="icon">⚙️</span>
+              <h3>Automation Tools</h3>
+              <p>Streamline your workflow with custom booking systems, CRM integrations, and marketing automation.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+ 
+      <!-- PROCESS -->
+      <section id="process" class="process-section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-label">Methodology</div>
             <h2>Our 4-Step Methodology</h2>
             <p>How we take your brand from idea to results.</p>
           </div>
@@ -441,63 +246,41 @@
             <div class="step">
               <div class="step-number">3</div>
               <h4>Execution</h4>
-              <p>
-                Turning ideas into seamless, high-performing digital solutions.
-              </p>
+              <p>Turning ideas into seamless, high-performing digital solutions.</p>
             </div>
             <div class="step">
               <div class="step-number">4</div>
               <h4>Performance</h4>
-              <p>
-                Tracking results, refining strategies, and scaling for success.
-              </p>
+              <p>Tracking results, refining strategies, and scaling for success.</p>
             </div>
           </div>
         </div>
       </section>
-
-      <section id="faq" class="container">
-        <div class="section-header">
-          <h2>Frequently Asked Questions</h2>
-          <p>Everything you need to know about working with us.</p>
-        </div>
-        <div style="max-width: 800px; margin: 0 auto">
-          <div class="faq-item">
-            <div class="faq-question">
-              What services does LangQuang provide? <span>+</span>
-            </div>
-            <div class="faq-answer">
-              We are a full-service agency in Brisbane offering branding, custom
-              web development, SEO and data reporting dashboards.
-            </div>
+ 
+      <!-- FAQ -->
+      <section id="faq">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-label">FAQ</div>
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know about working with us.</p>
           </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              Do you offer custom web development? <span>+</span>
+          <div class="faq-wrap">
+            <div class="faq-item">
+              <div class="faq-question">What services does LangQuang provide? <span class="faq-icon">+</span></div>
+              <div class="faq-answer">We are a full-service agency in Brisbane offering branding, custom web development, SEO and data reporting dashboards.</div>
             </div>
-            <div class="faq-answer">
-              Yes, we specialize in building custom, performance-driven websites
-              from scratch, tailored to your specific business requirements.
+            <div class="faq-item">
+              <div class="faq-question">Do you offer custom web development? <span class="faq-icon">+</span></div>
+              <div class="faq-answer">Yes, we specialize in building custom, performance-driven websites from scratch, tailored to your specific business requirements.</div>
             </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              How do you approach branding? <span>+</span>
+            <div class="faq-item">
+              <div class="faq-question">How do you approach branding? <span class="faq-icon">+</span></div>
+              <div class="faq-answer">Our approach blends creativity with strategy. We start with discovery to understand your values, then create a visual identity that connects with your audience.</div>
             </div>
-            <div class="faq-answer">
-              Our approach blends creativity with strategy. We start with
-              discovery to understand your values, then create a visual identity
-              that connects with your audience.
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              Do you provide ongoing support? <span>+</span>
-            </div>
-            <div class="faq-answer">
-              Absolutely. We provide ongoing website maintenance, SEO
-              monitoring, and support to ensure your digital assets continue to
-              perform at their best.
+            <div class="faq-item">
+              <div class="faq-question">Do you provide ongoing support? <span class="faq-icon">+</span></div>
+              <div class="faq-answer">Absolutely. We provide ongoing website maintenance, SEO monitoring, and support to ensure your digital assets continue to perform at their best.</div>
             </div>
           </div>
         </div>
@@ -523,7 +306,7 @@
         <div class="footer-links">
           <h4>Services</h4>
           <ul>
-            <li><a href="/connector/">Connector</a></li>
+            <li><a href="/facebook-ads-connector/">Facebook Ads Connector</a></li>
           </ul>
         </div>
         <div class="footer-links">
@@ -557,35 +340,80 @@
         © 2026 LangQuang Digital. All rights reserved.
       </div>
     </footer>
-    <script>
-      function scrollToSection(id) {
-        showMain();
-        setTimeout(() => {
-          const el = document.getElementById(id);
-          if (!el) return;
-
-          const offset = 80;
-          const y =
-            el.getBoundingClientRect().top + window.pageYOffset - offset;
-
-          window.scrollTo({
-            top: y,
-            behavior: "smooth",
-          });
-        }, 50);
-      }
-
-      // FAQ Accordion
-      document.querySelectorAll(".faq-question").forEach((button) => {
-        button.addEventListener("click", () => {
-          const answer = button.nextElementSibling;
-          const isOpen = answer.style.display === "block";
-          document
-            .querySelectorAll(".faq-answer")
-            .forEach((a) => (a.style.display = "none"));
-          answer.style.display = isOpen ? "none" : "block";
+<script>
+      /* Custom Cursor */
+      const dot = document.getElementById('cursor-dot');
+      const ring = document.getElementById('cursor-ring');
+      let mouseX=0, mouseY=0, ringX=0, ringY=0;
+ 
+      document.addEventListener('mousemove', e => {
+        mouseX = e.clientX; mouseY = e.clientY;
+        dot.style.left = mouseX+'px'; dot.style.top = mouseY+'px';
+      });
+ 
+      (function animateRing() {
+        ringX += (mouseX - ringX) * 0.12;
+        ringY += (mouseY - ringY) * 0.12;
+        ring.style.left = ringX+'px'; ring.style.top = ringY+'px';
+        requestAnimationFrame(animateRing);
+      })();
+ 
+      document.querySelectorAll('a, button, .faq-question, .card').forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
+      });
+ 
+      /* Navbar scroll */
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 20);
+      });
+ 
+      /* Intersection Observer for scroll-reveal */
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+ 
+      document.querySelectorAll('.card, .step-item, .step').forEach(el => io.observe(el));
+ 
+      /* Card stagger */
+      document.querySelectorAll('.card').forEach((card, i) => {
+        card.style.transitionDelay = (i * 0.08) + 's';
+        card.style.transition = `opacity 0.6s cubic-bezier(0.16,1,0.3,1) ${i*0.08}s, transform 0.6s cubic-bezier(0.16,1,0.3,1) ${i*0.08}s, border-color 0.35s, box-shadow 0.35s`;
+      });
+ 
+      /* Step stagger */
+      document.querySelectorAll('.step-item').forEach((el, i) => {
+        el.style.transitionDelay = (i * 0.08) + 's';
+        el.style.transition = `opacity 0.6s cubic-bezier(0.16,1,0.3,1) ${i*0.08}s, transform 0.6s cubic-bezier(0.16,1,0.3,1) ${i*0.08}s, border-color 0.3s, box-shadow 0.3s`;
+      });
+ 
+      document.querySelectorAll('.step').forEach((el, i) => {
+        el.style.transitionDelay = (i * 0.1) + 's';
+      });
+ 
+      /* FAQ accordion */
+      document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.parentElement;
+          const isOpen = item.classList.contains('open');
+          document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+          if (!isOpen) item.classList.add('open');
         });
       });
+ 
+      /* Scroll navigation helper */
+      function scrollToSection(id) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const y = el.getBoundingClientRect().top + window.pageYOffset - 80;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
     </script>
   </body>
 </html>
