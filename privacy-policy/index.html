@@ -15,7 +15,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | LQ Analytics</title>
+    <title>Privacy Policy | LQ Analytics – Facebook Ads Connector</title>
     <style>
       :root {
         --primary: #1877F2;
@@ -25,89 +25,43 @@
         --white: #ffffff;
         --border: #e5e7eb;
       }
-
       * { box-sizing: border-box; margin: 0; padding: 0; }
-
-      body { 
-        font-family: 'Inter', -apple-system, sans-serif; 
-        line-height: 1.6; 
-        color: var(--text-dark);
-        background: var(--white);
-      }
-
-      /* --- Navigation --- */
-      nav {
-        background: var(--white);
-        border-bottom: 1px solid var(--border);
-        padding: 0.8rem 0;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
-      .nav-container {
-        max-width: 1100px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 24px;
-      }
-      .nav-links a {
-        text-decoration: none;
-        color: var(--text-muted);
-        margin-left: 20px;
-        font-size: 0.9rem;
-        font-weight: 500;
-        transition: 0.2s;
-      }
+      body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: var(--text-dark); background: var(--white); }
+      nav { background: var(--white); border-bottom: 1px solid var(--border); padding: 0.8rem 0; position: sticky; top: 0; z-index: 1000; }
+      .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 24px; }
+      .nav-links a { text-decoration: none; color: var(--text-muted); margin-left: 20px; font-size: 0.9rem; font-weight: 500; transition: 0.2s; }
       .nav-links a:hover { color: var(--primary); }
-      .btn-cta {
-        background: var(--primary);
-        color: white !important;
-        padding: 8px 18px;
-        border-radius: 6px;
-      }
-
-      /* --- Content Layout --- */
-      .privacy-header {
-        background: var(--bg-gray);
-        padding: 60px 24px;
-        text-align: center;
-        border-bottom: 1px solid var(--border);
-      }
+      .btn-cta { background: var(--primary); color: white !important; padding: 8px 18px; border-radius: 6px; }
+      .privacy-header { background: var(--bg-gray); padding: 60px 24px; text-align: center; border-bottom: 1px solid var(--border); }
       .privacy-header h1 { font-size: 2.5rem; color: #000; margin-bottom: 10px; }
-      
       .container { max-width: 850px; margin: 60px auto; padding: 0 24px; }
-      
       h2 { font-size: 1.8rem; margin: 50px 0 20px; color: #000; border-bottom: 2px solid var(--bg-gray); padding-bottom: 10px; }
       h3 { font-size: 1.3rem; margin: 30px 0 15px; color: var(--primary); }
-      
       p { margin-bottom: 20px; color: #444; }
       ul { margin-bottom: 25px; padding-left: 20px; }
       li { margin-bottom: 12px; color: #444; }
       strong { color: #000; }
-
-      /* --- Footer --- */
-      footer { background: #111; color: #ccc; padding: 80px 24px 40px; margin-top: 100px; }
-      .footer-grid {
-        max-width: 1100px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr 1fr;
-        gap: 40px;
+      a { color: var(--primary); }
+      /* Connector-specific highlight box */
+      .connector-notice {
+        background: #f0f7ff;
+        border-left: 4px solid var(--primary);
+        padding: 18px 22px;
+        border-radius: 0 8px 8px 0;
+        margin: 20px 0 28px;
+        font-size: 0.95rem;
+        color: #0e3d70;
       }
+      .connector-notice strong { color: #0e3d70; }
+      footer { background: #111; color: #ccc; padding: 80px 24px 40px; margin-top: 100px; }
+      .footer-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
       .footer-logo img { filter: brightness(0) invert(1); margin-bottom: 20px; }
       .footer-links h4 { color: white; margin-bottom: 20px; font-size: 1rem; }
       .footer-links ul { list-style: none; padding: 0; }
       .footer-links li { margin-bottom: 10px; }
       .footer-links a { color: #ccc; text-decoration: none; font-size: 0.9rem; transition: 0.2s; }
       .footer-links a:hover { color: white; }
-
-      @media (max-width: 768px) {
-        .footer-grid { grid-template-columns: 1fr 1fr; }
-        .nav-links { display: none; }
-        .privacy-header h1 { font-size: 2rem; }
-      }
+      @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; } .nav-links { display: none; } .privacy-header h1 { font-size: 2rem; } }
     </style>
 </head>
 <body>
@@ -119,7 +73,7 @@
           <img src="../image/langquang.png" alt="LQ Analytics Logo" height="40" width="auto"/>
         </a>
         <div class="nav-links">
-          <a href="/facebook-ads-connector/">Facebook Ads Connector</a>
+          <a href="/data-studio/">Data Studio</a>
           <a href="/privacy-policy/">Privacy Policy</a>
           <a href="/terms/">Terms</a>
           <a href="/support/">Support</a>
@@ -130,94 +84,112 @@
 
     <header class="privacy-header">
       <h1>Privacy Policy</h1>
-      <p>Last Updated: April 2026</p>
+      <p>Last Updated: May 2026</p>
     </header>
 
     <div class="container">
       <main class="privacy-content">
         <p>
-          This Privacy Policy describes Our policies and procedures on the
-          collection, use and disclosure of Your information when You use the
-          Service and tells You about Your privacy rights and how the law
-          protects You.
+          This Privacy Policy describes the policies and procedures of LangQuang Digital (LQ Analytics) on the collection, use, and disclosure of Your information when You use our Service — including the <strong>Facebook Ads Analytics Connector for Data Studio</strong> — and tells You about Your privacy rights and how the law protects You.
         </p>
         <p>
-          We use Your Personal data to provide and improve the Service. By using
-          the Service, You agree to the collection and use of information in
-          accordance with this Privacy Policy.
+          By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.
         </p>
 
         <h2>Interpretation and Definitions</h2>
-        <h3>Interpretation</h3>
-        <p>
-          The words of which the initial letter is capitalized have meanings
-          defined under the following conditions. The following definitions
-          shall have the same meaning regardless of whether they appear in
-          singular or in plural.
-        </p>
-
         <h3>Definitions</h3>
-        <p>For the purposes of this Privacy Policy:</p>
         <ul>
-          <li><strong>Account</strong> means a unique account created for You to access our Service.</li>
-          <li><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party.</li>
-          <li><strong>Company</strong> (referred to as “the Company”, “We”, “Us” or “Our”) refers to LQ Digital.</li>
-          <li><strong>Cookies</strong> are small files containing browsing history details placed on Your device.</li>
-          <li><strong>Country</strong> refers to: Australia</li>
-          <li><strong>Device</strong> means any device that can access the Service.</li>
+          <li><strong>Company</strong> (referred to as "We", "Us" or "Our") refers to LangQuang Digital (LQ Analytics), Brisbane, Australia.</li>
+          <li><strong>Connector</strong> refers to the Facebook Ads Analytics Data Studio Connector developed and maintained by LQ Analytics.</li>
+          <li><strong>Service</strong> refers to the Connector and the website at <a href="https://lqanalytics.com/">https://lqanalytics.com/</a>.</li>
           <li><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</li>
-          <li><strong>Service Provider</strong> refers to third-party companies employed by the Company to facilitate the Service.</li>
-          <li><strong>Usage Data</strong> refers to data collected automatically (e.g., duration of a page visit).</li>
-          <li><strong>Website</strong> refers to LQ Digital, accessible from <a href="https://lqanalytics.com/">https://lqanalytics.com/</a></li>
+          <li><strong>OAuth Token</strong> refers to the access token issued by Facebook (Meta) upon authorization, used to retrieve ad data on your behalf.</li>
+          <li><strong>Usage Data</strong> refers to data collected automatically when using the Service.</li>
+          <li><strong>You</strong> means the individual accessing or using the Service.</li>
         </ul>
 
-        <h2>Collecting and Using Your Personal Data</h2>
-        <h3>Types of Data Collected</h3>
-        <h3>Personal Data</h3>
-        <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information, including but not limited to:</p>
+        <!-- ── CONNECTOR-SPECIFIC SECTION ── -->
+        <h2>Facebook Ads Connector — Data Practices</h2>
+
+        <div class="connector-notice">
+          This section specifically covers the <strong>Facebook Ads Analytics Connector for Data Studio</strong>. It describes exactly what data is accessed, how it is handled, and what is stored.
+        </div>
+
+        <h3>What Data the Connector Accesses</h3>
+        <p>When you authorize the Connector with your Facebook account, it requests the following OAuth 2.0 scopes from the Facebook Marketing API (v22.0):</p>
         <ul>
-          <li>Email address</li>
-          <li>First name and last name</li>
-          <li>Phone number</li>
-          <li>Address, State, Province, ZIP/Postal code, City</li>
+          <li><strong>ads_read</strong> — to read ad performance data (impressions, clicks, spend, reach, conversions, video metrics, etc.)</li>
+          <li><strong>ads_management</strong> — to enumerate your Business Portfolios and Ad Accounts so you can select which account to connect</li>
+          <li><strong>business_management</strong> — to list the Business Manager accounts associated with your Facebook profile</li>
         </ul>
+        <p>All access is <strong>read-only</strong>. The Connector cannot create, edit, pause, or delete any campaigns, ad sets, ads, or budgets in your Facebook Ads account.</p>
+
+        <h3>What Data Is Stored</h3>
+        <p>The Connector stores the following, and <strong>only</strong> the following, on your behalf:</p>
+        <ul>
+          <li><strong>OAuth Access Token</strong> — Your Facebook access token is stored securely in Google Apps Script's <code>UserProperties</code> service, which is scoped to your individual Google account. It is never stored on LQ Analytics servers.</li>
+          <li><strong>No ad performance data is stored</strong> — Campaign names, impressions, spend, conversions, and all other Facebook Ads metrics are fetched on demand when Data Studio requests a data refresh and are passed directly to Data Studio. We do not cache, log, or retain this data on our infrastructure.</li>
+        </ul>
+
+        <h3>How the OAuth Token Is Used</h3>
+        <p>The stored OAuth token is used solely to authenticate requests to the Facebook Marketing API on your behalf when Data Studio fetches data. It is not shared with any third party, not used for any purpose other than data retrieval, and not accessible to LQ Analytics staff.</p>
+
+        <h3>How to Revoke Access</h3>
+        <p>You can revoke the Connector's access to your Facebook account at any time by:</p>
+        <ul>
+          <li>Going to <strong>Facebook Settings → Security and Login → Apps and Websites</strong> and removing the LQ Analytics app, or</li>
+          <li>Re-opening the data source in Data Studio and clicking <strong>Revoke Access</strong> in the connector settings</li>
+        </ul>
+        <p>Revoking access will immediately invalidate the stored token and prevent any further data retrieval.</p>
+
+        <h3>No Account Registration Required</h3>
+        <p>You do not need to create an account with LQ Analytics to use the Connector. No email address, name, or personal information is collected from you by LQ Analytics during the connector setup or usage.</p>
+
+        <!-- ── GENERAL WEBSITE SECTION ── -->
+        <h2>Website Data Collection</h2>
 
         <h3>Usage Data</h3>
-        <p>Usage Data is collected automatically when using the Service. It may include Your Device’s IP address, browser type, pages visited, and time spent on those pages.</p>
+        <p>When you visit <a href="https://lqanalytics.com/">lqanalytics.com</a>, we may automatically collect Usage Data such as your device's IP address, browser type, pages visited, and time spent on pages. This is collected via Google Tag Manager and Google Analytics for the purpose of improving our website.</p>
 
-        <h3>Third-Party Social Media Services</h3>
-        <p>The Company allows You to log in through Google, Facebook, Instagram, Twitter, and LinkedIn. We may collect data already associated with those accounts, such as Your name and email address.</p>
-
-        <h2>Tracking Technologies and Cookies</h2>
-        <p>We use Cookies and similar tracking technologies (beacons, tags, and scripts) to analyze Our Service and improve user experience.</p>
-        <ul>
-          <li><strong>Cookies:</strong> Small files on Your Device. You can refuse them via browser settings.</li>
-          <li><strong>Web Beacons:</strong> Electronic files used to count users or record section popularity.</li>
-        </ul>
+        <h3>Cookies</h3>
+        <p>We use cookies and similar tracking technologies to analyze website traffic and improve user experience. You can refuse cookies via your browser settings. Note that cookies are only used on the lqanalytics.com website — the Data Studio Connector itself does not use cookies.</p>
 
         <h2>Use of Your Personal Data</h2>
-        <p>The Company may use Personal Data to:</p>
+        <p>LQ Analytics uses data only to:</p>
         <ul>
-          <li>Provide and maintain our Service.</li>
-          <li>Manage Your Account and registration.</li>
-          <li>Contact You via email, SMS, or telephone.</li>
-          <li>Analyze data to improve Service performance.</li>
-          <li>Conduct business transfers or evaluate mergers.</li>
+          <li>Provide and maintain the Connector service</li>
+          <li>Retrieve Facebook Ads data on your behalf and pass it to Data Studio</li>
+          <li>Analyze website traffic to improve our website (via Google Analytics)</li>
+          <li>Respond to support enquiries sent to our email</li>
         </ul>
+        <p>We do not sell, share, rent, or trade your data with third parties for marketing purposes.</p>
 
         <h2>Retention of Your Personal Data</h2>
-        <p>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy or to comply with legal obligations.</p>
+        <p>The OAuth access token stored by the Connector persists in Google's <code>UserProperties</code> until you revoke access or reset authorization. LQ Analytics does not independently store or retain any personal data beyond what is described in this policy. Website analytics data is retained according to Google Analytics' standard retention settings.</p>
 
         <h2>Security of Your Personal Data</h2>
-        <p>The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet is 100% secure.</p>
+        <p>OAuth tokens are stored within Google's infrastructure (Apps Script UserProperties), which is secured by Google. LQ Analytics does not handle or transmit your token outside of the Google Apps Script environment. No ad performance data is ever transmitted to or stored on LQ Analytics servers.</p>
 
-        <h2>Children’s Privacy</h2>
+        <h2>Third-Party Services</h2>
+        <p>The Connector interacts with the following third-party services:</p>
+        <ul>
+          <li><strong>Facebook (Meta) Marketing API</strong> — to retrieve your ad performance data. Subject to <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta's Privacy Policy</a>.</li>
+          <li><strong>Google Data Studio / Looker Studio</strong> — the reporting platform where your data is visualized. Subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+          <li><strong>Google Apps Script</strong> — the platform that runs the Connector code and securely stores your OAuth token.</li>
+          <li><strong>Google Tag Manager / Google Analytics</strong> — used on lqanalytics.com website only, not within the Connector.</li>
+        </ul>
+
+        <h2>Children's Privacy</h2>
         <p>Our Service does not address anyone under the age of 13. We do not knowingly collect information from children under this age.</p>
 
+        <h2>Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Changes will be reflected by updating the "Last Updated" date at the top of this page. We encourage you to review this page periodically.</p>
+
         <h2>Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, You can contact us:</p>
+        <p>If you have any questions about this Privacy Policy or how your data is handled by the Connector, please contact us:</p>
         <ul>
           <li>By email: <strong><a href="mailto:analytics.lq.digital@gmail.com">analytics.lq.digital@gmail.com</a></strong></li>
+          <li>Via our <a href="/support/">Support Center</a></li>
         </ul>
       </main>
     </div>
@@ -228,15 +200,11 @@
           <div class="footer-logo">
             <img src="../image/langquang.png" alt="LQ Analytics Logo" height="40" width="auto"/>
           </div>
-          <p style="font-size: 0.9rem; color:white; line-height: 1.4;">
-            Brisbane's leading digital partner for branding, development, and strategic growth.
-          </p>
+          <p style="font-size: 0.9rem; color:white; line-height: 1.4;">Brisbane's leading digital partner for branding, development, and strategic growth.</p>
         </div>
         <div class="footer-links">
           <h4>Services</h4>
-          <ul>
-            <li><a href="/facebook-ads-connector">Facebook Ads Connector</a></li>
-          </ul>
+          <ul><li><a href="/facebook-ads-connector/">Facebook Ads Connector</a></li></ul>
         </div>
         <div class="footer-links">
           <h4>Legal</h4>
@@ -248,12 +216,9 @@
         </div>
         <div class="footer-links">
           <h4>Contact</h4>
-          <ul>
-            <li><a href="/contact/">Contact us</a></li>
-          </ul>
+          <ul><li><a href="/contact/">Contact us</a></li></ul>
         </div>
       </div>
-      
       <div style="text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #333; font-size: 0.8rem; color: #888;">
         <p style="margin-bottom: 10px;">This connector is developed and maintained by LangQuang Digital (LQ Analytics)</p>
         © 2026 LangQuang Digital. All rights reserved.

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms of Use | LQ Analytics</title>
+  <title>Terms of Use | LQ Analytics – Facebook Ads Connector</title>
   <style>
     :root {
       --primary: #1877F2;
@@ -13,114 +13,39 @@
       --border: #e5e7eb;
       --white: #ffffff;
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body { 
-      font-family: 'Inter', system-ui, -apple-system, sans-serif; 
-      line-height: 1.6; 
-      color: var(--text-dark);
-      background-color: var(--white);
-    }
-
-    /* --- Navigation --- */
-    nav {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      padding: 1rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .nav-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 24px;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: var(--text-muted);
-      margin-left: 20px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; line-height: 1.6; color: var(--text-dark); background-color: var(--white); }
+    nav { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; position: sticky; top: 0; z-index: 1000; }
+    .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 24px; }
+    .nav-links a { text-decoration: none; color: var(--text-muted); margin-left: 20px; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: var(--primary); }
-    .btn-cta {
-      background: var(--primary);
-      color: white !important;
-      padding: 8px 16px;
-      border-radius: 6px;
-    }
-
-    /* --- Content Layout --- */
-    .legal-header {
-      background: var(--bg-light);
-      padding: 60px 24px;
-      text-align: center;
-      border-bottom: 1px solid var(--border);
-    }
+    .btn-cta { background: var(--primary); color: white !important; padding: 8px 16px; border-radius: 6px; }
+    .legal-header { background: var(--bg-light); padding: 60px 24px; text-align: center; border-bottom: 1px solid var(--border); }
     .legal-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
     .last-updated { color: var(--text-muted); font-size: 0.9rem; }
-
-    .container {
-      max-width: 1000px;
-      margin: 60px auto;
-      display: grid;
-      grid-template-columns: 250px 1fr;
-      gap: 60px;
-      padding: 0 24px;
-    }
-
-    /* --- Sidebar Nav --- */
+    .container { max-width: 1000px; margin: 60px auto; display: grid; grid-template-columns: 250px 1fr; gap: 60px; padding: 0 24px; }
     .sidebar { position: sticky; top: 100px; height: fit-content; }
     .sidebar h4 { margin-bottom: 15px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); }
     .sidebar ul { list-style: none; }
     .sidebar li { margin-bottom: 10px; }
     .sidebar a { text-decoration: none; color: var(--text-muted); font-size: 0.95rem; transition: 0.2s; }
     .sidebar a:hover { color: var(--primary); }
-
-    /* --- Main Content --- */
-    .content h2 { 
-      font-size: 1.5rem; 
-      margin: 40px 0 15px; 
-      color: #000; 
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--bg-light);
-    }
+    .content h2 { font-size: 1.5rem; margin: 40px 0 15px; color: #000; padding-bottom: 8px; border-bottom: 1px solid var(--bg-light); }
+    .content h3 { font-size: 1.1rem; margin: 24px 0 10px; color: var(--primary); }
     .content p { margin-bottom: 20px; color: #444; }
     .content ul { margin-bottom: 20px; padding-left: 20px; }
     .content li { margin-bottom: 10px; color: #444; }
-
-    /* --- Footer --- */
-    footer {
-      background: #111;
-      color: #ccc;
-      padding: 80px 24px 40px;
-      margin-top: 100px;
-    }
-    .footer-grid {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 40px;
-    }
+    .content a { color: var(--primary); }
+    .connector-notice { background: #f0f7ff; border-left: 4px solid var(--primary); padding: 18px 22px; border-radius: 0 8px 8px 0; margin: 20px 0 28px; font-size: 0.95rem; color: #0e3d70; }
+    footer { background: #111; color: #ccc; padding: 80px 24px 40px; margin-top: 100px; }
+    .footer-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
     .footer-logo img { filter: brightness(0) invert(1); margin-bottom: 20px; }
     .footer-links h4 { color: white; margin-bottom: 20px; }
     .footer-links ul { list-style: none; }
     .footer-links li { margin-bottom: 10px; }
     .footer-links a { color: #ccc; text-decoration: none; font-size: 0.9rem; }
     .footer-links a:hover { color: white; }
-
-    @media (max-width: 768px) {
-      .container { grid-template-columns: 1fr; }
-      .sidebar { display: none; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-    }
+    @media (max-width: 768px) { .container { grid-template-columns: 1fr; } .sidebar { display: none; } .footer-grid { grid-template-columns: 1fr 1fr; } .nav-links { display: none; } }
   </style>
 </head>
 <body>
@@ -131,7 +56,7 @@
       <img src="../image/langquang.png" alt="LQ Analytics Logo" height="40" width="auto" />
     </a>
     <div class="nav-links">
-      <a href="/facebook-ads-connector/">Facebook Ads Connector</a>
+      <a href="/data-studio/">Data Studio</a>
       <a href="/privacy-policy/">Privacy Policy</a>
       <a href="/terms/">Terms</a>
       <a href="/support/">Support</a>
@@ -142,56 +67,109 @@
 
 <header class="legal-header">
   <h1>Terms of Use</h1>
-  <p class="last-updated">Last Updated: January 2026</p>
+  <p class="last-updated">Last Updated: May 2026</p>
 </header>
 
 <main class="container">
   <aside class="sidebar">
-    <h4>Legal Navigation</h4>
+    <h4>Contents</h4>
     <ul>
       <li><a href="#acceptance">1. Acceptance</a></li>
       <li><a href="#service">2. Service Description</a></li>
-      <li><a href="#responsibilities">3. Responsibilities</a></li>
-      <li><a href="#connector">4. Connector Use</a></li>
-      <li><a href="#privacy">5. Privacy</a></li>
-      <li><a href="#liability">6. Liability</a></li>
+      <li><a href="#connector">3. Connector Use</a></li>
+      <li><a href="#oauth">4. OAuth & Permissions</a></li>
+      <li><a href="#data">5. Data & No Storage</a></li>
+      <li><a href="#responsibilities">6. User Responsibilities</a></li>
+      <li><a href="#facebook-policy">7. Facebook Policy</a></li>
+      <li><a href="#availability">8. Availability</a></li>
+      <li><a href="#liability">9. Liability</a></li>
+      <li><a href="#privacy">10. Privacy</a></li>
+      <li><a href="#changes">11. Changes</a></li>
+      <li><a href="#contact">12. Contact</a></li>
     </ul>
   </aside>
 
   <div class="content">
-    <p>Welcome to LQ Analytics. By accessing or using our services, you agree to be bound by the following Terms of Use.</p>
+    <p>Welcome to LQ Analytics. These Terms of Use govern your access to and use of our services, including the <strong>Facebook Ads Analytics Connector for Data Studio</strong> ("Connector") and the website at <a href="https://lqanalytics.com/">lqanalytics.com</a>. By using our services, you agree to be bound by these Terms.</p>
 
     <h2 id="acceptance">1. Acceptance of Terms</h2>
-    <p>By using our website and connector services, you agree to comply with these Terms. If you do not agree, please do not use our services.</p>
+    <p>By accessing or using the Connector or our website, you confirm that you have read, understood, and agree to these Terms of Use and our <a href="/privacy-policy/">Privacy Policy</a>. If you do not agree, please do not use our services.</p>
 
     <h2 id="service">2. Description of Service</h2>
-    <p>LQ Analytics provides digital marketing services and data connectors that allow users to integrate third-party platforms with reporting tools such as Data Studio.</p>
+    <p>LQ Analytics provides the Facebook Ads Analytics Connector, a community connector for Google Data Studio (also known as Looker Studio) that allows users to import Facebook Ads performance data directly into Data Studio for the purpose of building custom reports and dashboards.</p>
+    <p>The Connector is developed and maintained by LangQuang Digital (LQ Analytics), based in Brisbane, Australia.</p>
 
-    <h2 id="responsibilities">3. User Responsibilities</h2>
+    <h2 id="connector">3. Use of the Connector</h2>
+
+    <div class="connector-notice">
+      This section specifically covers the <strong>Facebook Ads Analytics Connector for Data Studio</strong> — what it does, what it accesses, and the conditions of use.
+    </div>
+
+    <h3>What the Connector Does</h3>
+    <p>The Connector authenticates with your Facebook account via OAuth 2.0 and fetches ad performance data from the Facebook Marketing API (v22.0) on your behalf. This data is passed directly to Data Studio for visualization. The Connector operates at the ad, ad set, and campaign level and supports 60+ metrics and dimensions including impressions, clicks, spend, reach, video analytics, cost-per-action breakdowns, and demographic data.</p>
+
+    <h3>What the Connector Does Not Do</h3>
     <ul>
-      <li>You must provide accurate and complete information when using our services.</li>
-      <li>You are responsible for maintaining the confidentiality of your account and credentials.</li>
-      <li>You agree not to misuse or attempt to disrupt our services.</li>
+      <li>The Connector cannot create, edit, pause, or delete any ads, campaigns, ad sets, or budgets in your Facebook Ads account.</li>
+      <li>The Connector does not store your Facebook ad performance data on LQ Analytics servers.</li>
+      <li>The Connector does not share your data with any third parties beyond what is required to operate (Facebook API and Google Data Studio).</li>
     </ul>
 
-    <h2 id="connector">4. Use of Connector</h2>
-    <p>Our connector services may require authorization via third-party platforms. You agree to grant only the necessary permissions required for functionality.</p>
+    <h3>No Account Required</h3>
+    <p>You do not need to create an LQ Analytics account to use the Connector. No registration, subscription, or payment is required. The Connector is provided free of charge.</p>
 
-    <h2 id="privacy">5. Data and Privacy</h2>
-    <p>Your use of our services is also governed by our <a href="/privacy-policy/">Privacy Policy</a>. Please review it to understand how we collect and use data.</p>
+    <h2 id="oauth">4. OAuth Authorization and Permissions</h2>
+    <p>To use the Connector, you must authorize it with your Facebook account. By doing so, you grant the Connector the following read-only OAuth 2.0 permissions:</p>
+    <ul>
+      <li><strong>ads_read</strong> — to read ad performance metrics from your ad accounts</li>
+      <li><strong>ads_management</strong> — to enumerate your ad accounts so you can select which to connect</li>
+      <li><strong>business_management</strong> — to list Business Portfolios associated with your Facebook profile</li>
+    </ul>
+    <p>All permissions are read-only. You agree to grant only the permissions necessary for the Connector to function. You may revoke these permissions at any time via Facebook Settings → Security and Login → Apps and Websites, or via the Data Studio data source settings.</p>
 
-    <h2 id="liability">6. Limitations of Liability</h2>
-    <p>We are not liable for any indirect, incidental, or consequential damages resulting from the use or inability to use our services.</p>
+    <h3>Token Storage</h3>
+    <p>Your Facebook OAuth access token is stored securely in Google Apps Script's <code>UserProperties</code> service, scoped to your individual Google account. It is not stored on LQ Analytics servers and is not accessible to LQ Analytics staff. The token is used solely to authenticate API requests to Facebook on your behalf when Data Studio refreshes data.</p>
 
-    <h2 id="availability">7. Service Availability</h2>
-    <p>We strive to maintain continuous availability but do not guarantee uninterrupted service. Maintenance or updates may cause temporary downtime.</p>
+    <h2 id="data">5. Data Access and No Storage Policy</h2>
+    <p>LQ Analytics does not store, log, cache, or retain any Facebook Ads performance data (campaign names, impressions, spend, conversions, or any other metrics) on its own infrastructure. All ad data fetched from the Facebook Marketing API is returned directly to Data Studio in real time and is not retained by the Connector beyond the duration of the API request.</p>
+    <p>You are responsible for the data that is displayed within your Data Studio reports and dashboards. LQ Analytics is not responsible for how you use, share, or distribute reports created using the Connector.</p>
 
-    <h2 id="changes">8. Changes to Terms</h2>
-    <p>We reserve the right to update these Terms at any time. Continued use of the service constitutes acceptance of the updated Terms.</p>
+    <h2 id="responsibilities">6. User Responsibilities</h2>
+    <ul>
+      <li>You must have the necessary permissions and authority to access the Facebook Ad Accounts you connect to the Connector.</li>
+      <li>You are responsible for ensuring your use of the Connector complies with Facebook's Terms of Service and advertising policies.</li>
+      <li>You agree not to use the Connector for any unlawful purpose or in a way that could damage, disable, or impair the service.</li>
+      <li>You are responsible for maintaining the security of your Google and Facebook accounts used with the Connector.</li>
+    </ul>
 
-    <h2 id="contact">9. Contact Us</h2>
-    <p>If you have any questions about these Terms, please contact us at:</p>
-    <p><strong><a href="mailto:analytics.lq.digital@gmail.com">analytics.lq.digital@gmail.com</a></strong></p>
+    <h2 id="facebook-policy">7. Compliance with Facebook Platform Policy</h2>
+    <p>Your use of the Connector is subject to <a href="https://developers.facebook.com/policy/" target="_blank" rel="noopener">Facebook's Platform Policy</a> and <a href="https://www.facebook.com/policies" target="_blank" rel="noopener">Facebook's Terms of Service</a>. LQ Analytics is an independent developer and is not affiliated with, endorsed by, or sponsored by Meta Platforms, Inc.</p>
+    <p>LQ Analytics reserves the right to suspend or discontinue the Connector if required to comply with Facebook's developer policies or if Facebook's API changes make continued operation impractical.</p>
+
+    <h2 id="availability">8. Service Availability</h2>
+    <p>We strive to maintain continuous availability of the Connector but do not guarantee uninterrupted service. The Connector depends on the availability of the Facebook Marketing API and Google Data Studio, both of which are operated by third parties outside our control. Scheduled maintenance, API changes, or third-party outages may cause temporary unavailability.</p>
+
+    <h2 id="liability">9. Limitations of Liability</h2>
+    <p>The Connector is provided "as is" without warranty of any kind, express or implied. LQ Analytics is not liable for:</p>
+    <ul>
+      <li>Any inaccuracies in data returned by the Facebook Marketing API</li>
+      <li>Loss of data, revenue, or business resulting from use or inability to use the Connector</li>
+      <li>Any indirect, incidental, or consequential damages arising from your use of the Connector or Data Studio reports created with it</li>
+      <li>Changes to the Facebook API or Data Studio platform that affect Connector functionality</li>
+    </ul>
+
+    <h2 id="privacy">10. Privacy</h2>
+    <p>Your use of the Connector is also governed by our <a href="/privacy-policy/">Privacy Policy</a>, which is incorporated into these Terms by reference. The Privacy Policy describes in detail how OAuth tokens are stored, what data is accessed, what is not stored, and how you can revoke access.</p>
+
+    <h2 id="changes">11. Changes to These Terms</h2>
+    <p>We reserve the right to update these Terms at any time. Changes will be reflected by updating the "Last Updated" date at the top of this page. Continued use of the Connector after changes are posted constitutes acceptance of the updated Terms.</p>
+
+    <h2 id="contact">12. Contact Us</h2>
+    <p>If you have any questions about these Terms or the Connector, please contact us:</p>
+    <ul>
+      <li>By email: <strong><a href="mailto:analytics.lq.digital@gmail.com">analytics.lq.digital@gmail.com</a></strong></li>
+      <li>Via our <a href="/support/">Support Center</a></li>
+    </ul>
   </div>
 </main>
 
@@ -199,17 +177,13 @@
   <div class="footer-grid">
     <div>
       <div class="footer-logo">
-        <img src="../image/langquang.png" alt="LQ Analytics Logo" height="40" width="auto"/> 
+        <img src="../image/langquang.png" alt="LQ Analytics Logo" height="40" width="auto"/>
       </div>
-      <p style="font-size: 0.9rem; line-height: 1.4;">
-        Brisbane's leading digital partner for branding, development, and strategic growth.
-      </p>
+      <p style="font-size: 0.9rem; line-height: 1.4;">Brisbane's leading digital partner for branding, development, and strategic growth.</p>
     </div>
     <div class="footer-links">
       <h4>Services</h4>
-      <ul>
-        <li><a href="/facebook-ads-connector/">Facebook Ads Connector</a></li>
-      </ul>
+      <ul><li><a href="/facebook-ads-connector/">Facebook Ads Connector</a></li></ul>
     </div>
     <div class="footer-links">
       <h4>Legal</h4>
@@ -221,12 +195,9 @@
     </div>
     <div class="footer-links">
       <h4>Contact</h4>
-      <ul>
-        <li><a href="/contact/">Contact us</a></li>
-      </ul>
+      <ul><li><a href="/contact/">Contact us</a></li></ul>
     </div>
   </div>
-  
   <div style="text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #333; font-size: 0.8rem; color: #888;">
     <p style="margin-bottom: 10px;">This connector is developed and maintained by LangQuang Digital (LQ Analytics)</p>
     © 2026 LangQuang Digital. All rights reserved.

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support | LQ Analytics</title>
+  <title>Support | LQ Analytics – Facebook Ads Connector for Data Studio</title>
   <style>
     :root {
       --primary: #1877F2;
@@ -18,9 +18,9 @@
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    body { 
-      font-family: 'Inter', system-ui, -apple-system, sans-serif; 
-      line-height: 1.6; 
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
       color: var(--text-dark);
       background-color: var(--white);
     }
@@ -61,18 +61,42 @@
     /* --- Support Hero --- */
     .support-hero {
       background: linear-gradient(180deg, var(--primary-soft) 0%, var(--white) 100%);
-      padding: 80px 24px;
+      padding: 80px 24px 60px;
       text-align: center;
     }
     .support-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 15px; }
-    .support-hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+    .support-hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 24px; }
+
+    /* Product badge */
+    .product-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: white; border: 1px solid var(--border);
+      padding: 8px 18px; border-radius: 8px;
+      font-size: 0.875rem; color: var(--text-muted);
+      margin-bottom: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .product-badge a { color: var(--primary); font-weight: 600; text-decoration: none; }
+    .product-badge a:hover { text-decoration: underline; }
+    .product-badge-sep { color: #ccc; }
+
+    /* Hero CTA */
+    .hero-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--primary); color: white;
+      padding: 11px 24px; border-radius: 8px;
+      font-size: 0.9rem; font-weight: 600;
+      text-decoration: none; margin-top: 8px;
+      transition: background 0.15s;
+    }
+    .hero-cta:hover { background: #0d5ec9; }
 
     .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
 
-    /* --- Troubleshooting Sections --- */
-    h2 { 
-      font-size: 1.75rem; 
-      margin: 50px 0 20px; 
+    /* --- Section Headings --- */
+    h2 {
+      font-size: 1.75rem;
+      margin: 50px 0 20px;
       display: flex;
       align-items: center;
       gap: 12px;
@@ -84,6 +108,7 @@
       height: 24px;
       background: var(--primary);
       border-radius: 4px;
+      flex-shrink: 0;
     }
 
     /* --- Step list --- */
@@ -96,34 +121,56 @@
       border-radius: 10px;
       margin-bottom: 12px;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 15px;
       box-shadow: 2px 2px 5px rgba(0,0,0,0.02);
+      font-size: 0.95rem;
     }
     .setup-steps li::before {
       content: counter(my-counter);
       background: var(--primary);
       color: white;
-      width: 28px;
-      height: 28px;
+      width: 28px; height: 28px; min-width: 28px;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
       font-weight: bold;
       font-size: 0.85rem;
     }
+    .setup-steps li a { color: var(--primary); font-weight: 600; text-decoration: none; }
+    .setup-steps li a:hover { text-decoration: underline; }
 
     /* --- Issue Cards --- */
     .issue-list { list-style: none; display: grid; gap: 15px; }
     .issue-item {
-      padding: 20px;
+      padding: 20px 24px;
       border-radius: 10px;
       background: #fafafa;
       border-left: 4px solid #ddd;
+      font-size: 0.95rem;
     }
-    .issue-item strong { color: var(--primary); display: block; margin-bottom: 5px; }
+    .issue-item strong {
+      color: var(--primary);
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1rem;
+    }
+    .issue-item p { color: var(--text-muted); }
+    .issue-item ul {
+      margin-top: 8px; padding-left: 20px;
+      color: var(--text-muted); display: flex; flex-direction: column; gap: 4px;
+    }
+
+    /* --- Info note --- */
+    .info-note {
+      background: #f0f7ff;
+      border-left: 4px solid var(--primary);
+      padding: 14px 20px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.9rem;
+      color: #0e5a8a;
+      margin: 20px 0;
+    }
 
     /* --- Contact Box --- */
     .contact-card {
@@ -136,7 +183,8 @@
     }
     .contact-card h2 { color: white; justify-content: center; margin-top: 0; }
     .contact-card h2::before { display: none; }
-    .contact-card a { color: white; text-decoration: underline; font-size: 1.4rem; font-weight: bold; }
+    .contact-card p { color: rgba(255,255,255,0.85); margin-bottom: 6px; }
+    .contact-card a { color: white; text-decoration: underline; font-size: 1.3rem; font-weight: bold; }
     .badge {
       display: inline-block;
       background: rgba(255,255,255,0.2);
@@ -145,6 +193,17 @@
       font-size: 0.8rem;
       margin-top: 15px;
     }
+    .connector-link-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: white; text-decoration: none;
+      padding: 10px 22px; border-radius: 8px;
+      font-size: 0.875rem; font-weight: 600;
+      margin-top: 20px;
+      transition: background 0.15s;
+    }
+    .connector-link-btn:hover { background: rgba(255,255,255,0.25); }
 
     /* --- Footer --- */
     footer { background: #111; color: #ccc; padding: 80px 24px 40px; margin-top: 100px; }
@@ -166,74 +225,115 @@
       .footer-grid { grid-template-columns: 1fr 1fr; }
       .nav-links { display: none; }
       .support-hero h1 { font-size: 2.2rem; }
+      .contact-card { padding: 28px 20px; }
     }
   </style>
 </head>
 <body>
-  <nav>
-      <div class="nav-container">
-        <a href="/" class="logo">
-          <img src="../image/langquang.png" alt="LQ Analytics Logo" height="40" width="auto"/>
-        </a>
-        <div class="nav-links">
-          <a href="/facebook-ads-connector/">Facebook Ads Connector</a>
-          <a href="/privacy-policy/">Privacy Policy</a>
-          <a href="/terms/">Terms</a>
-          <a href="/support/">Support</a>
-          <a href="/contact" class="btn-cta">Contact</a>
-        </div>
-      </div>
-    </nav>
+
+<nav>
+  <div class="nav-container">
+    <a href="/" class="logo">
+      <img src="../image/langquang.png" alt="LQ Analytics Logo" height="40" width="auto"/>
+    </a>
+    <div class="nav-links">
+      <a href="/data-studio/">Data Studio</a>
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <a href="/terms/">Terms</a>
+      <a href="/support/">Support</a>
+      <a href="/contact" class="btn-cta">Contact</a>
+    </div>
+  </div>
+</nav>
 
 <header class="support-hero">
+  <div class="product-badge">
+    Support for
+    <span class="product-badge-sep">→</span>
+    <a href="/facebook-ads-connector/">Facebook Ads Analytics Connector</a>
+    <span class="product-badge-sep">·</span>
+    Data Studio by LQ Analytics
+  </div>
   <h1>Support Center</h1>
   <p>How can we help you today? Review our quick-start guide or troubleshoot common connector issues.</p>
+  <a href="https://datastudio.google.com/datasources/create?connectorId=AKfycbwiyh8LyfZyQ8aG5Fp39pCsIEccpSsK-w3j8y6N-ZB3-rZJX9-aUP9C0e1F5PivZ_Uv" class="hero-cta" target="_blank" rel="noopener">
+    ↗ Add Connector to Data Studio
+  </a>
 </header>
 
 <main class="container">
+
   <h2>Getting Started</h2>
+  <div class="info-note">
+    <strong>No account required.</strong> You do not need to create an LQ Analytics account. Simply use your existing Google and Facebook credentials to connect.
+  </div>
   <ol class="setup-steps">
-    <li>Open Data Studio</li>
-    <li>Select “Add Data Source”</li>
-    <li>Choose the LQ Analytics connector</li>
-    <li>Authenticate your account</li>
-    <li>Select your data and create your report</li>
+    <li>Open <a href="https://datastudio.google.com/" target="_blank" rel="noopener">Data Studio (datastudio.google.com)</a> and click Create → Data Source</li>
+    <li>Search for "Facebook Ads Analytics (LQ Analytics)" in the connector gallery and select it</li>
+    <li>Click Authorize and log in with your Facebook account — grant the ads_read and ads_management permissions when prompted</li>
+    <li>Select the Ad Account you want to report on from the dropdown</li>
+    <li>Click Connect— all 60+ metrics and dimensions are now available in your report</li>
   </ol>
 
   <h2>Common Issues</h2>
   <div class="issue-list">
     <div class="issue-item">
-      <strong>Authentication errors</strong> Ensure you are logged into the correct Google and Meta accounts.
+      <strong>Authentication errors</strong>
+      <p>Ensure you are logged into the correct Google and Facebook (Meta) accounts. Try disconnecting and re-authorizing the connector from within the Data Studio data source settings.</p>
     </div>
     <div class="issue-item">
-      <strong>No data loading</strong> Check your API permissions and ensure the selected Ad Account has active data.
+      <strong>No ad accounts appearing in the dropdown</strong>
+      <p>This usually means your Facebook account is not linked to a Business Portfolio with active Ad Accounts. Check that:</p>
+      <ul>
+        <li>Your Facebook account has access to at least one active Business Manager</li>
+        <li>The Ad Accounts within that Business have an active status (not disabled)</li>
+        <li>You accepted all permission prompts during the OAuth authorization step</li>
+      </ul>
     </div>
     <div class="issue-item">
-      <strong>Access issues</strong> Verify that your user role in Facebook Business Manager has "View Performance" access.
+      <strong>No data loading / empty reports</strong>
+      <p>Check the following:</p>
+      <ul>
+        <li>Your API permissions are correctly granted — try re-authorizing the connector</li>
+        <li>The selected Ad Account has ran active campaigns in the chosen date range</li>
+        <li>Your user role in Facebook Business Manager has at least "View Performance" access</li>
+      </ul>
+    </div>
+    <div class="issue-item">
+      <strong>Date range returns no data (especially for today)</strong>
+      <p>Facebook Ads data has an approximate 24-hour delay. If your selected date range includes today, try changing the end date to yesterday. The connector automatically adjusts for this, but Data Studio's cached data source may need a manual refresh.</p>
+    </div>
+    <div class="issue-item">
+      <strong>Access denied or permission errors</strong>
+      <p>Verify that your user role in Facebook Business Manager has <strong>"View Performance"</strong> access on the relevant Ad Account. Admin or Advertiser roles are recommended for full data access.</p>
     </div>
   </div>
 
   <h2>Connector Troubleshooting</h2>
-  <p style="margin-bottom: 15px;">If the connector fails to load or return data, try these steps:</p>
+  <p style="margin-bottom: 15px; color: var(--text-muted);">If the connector fails to load or return data, try these steps in order:</p>
   <ul class="issue-list">
-    <li class="issue-item">Re-authenticate your account within the Data Studio data source settings.</li>
-    <li class="issue-item">Check if your data source is active and not disabled by a manager.</li>
-    <li class="issue-item">Ensure you have granted all requested permissions during the OAuth popup.</li>
+    <li class="issue-item">Re-authenticate your account: open the data source in Data Studio, click <strong>Edit Connection</strong>, and go through the authorization flow again.</li>
+    <li class="issue-item">Check if the data source is active and not disabled by an account manager in Facebook Business Manager.</li>
+    <li class="issue-item">Ensure you granted all requested permissions (<code>ads_read</code>, <code>ads_management</code>) during the OAuth popup — partial grants will prevent data from loading.</li>
+    <li class="issue-item">If you recently changed Facebook account passwords or revoked app permissions, you will need to re-authorize the connector. Go to <strong>Facebook Settings → Security → Apps and Websites</strong> and remove the LQ Analytics app, then re-connect from Data Studio.</li>
   </ul>
 
   <section class="contact-card">
-    <h2>Contact Support</h2>
-    <p>For technical assistance, please reach out via email:</p>
+    <h2>Still Need Help?</h2>
+    <p>For technical assistance with the Facebook Ads Analytics connector, please reach out via email:</p>
     <p style="margin: 15px 0;"><a href="mailto:analytics.lq.digital@gmail.com">analytics.lq.digital@gmail.com</a></p>
     <div class="badge">Average Response: 24–48 hours</div>
+    <br/>
+    <a href="/facebook-ads-connector/" class="connector-link-btn">← Back to Connector Page</a>
   </section>
+
 </main>
 
 <footer>
   <div class="footer-grid">
     <div>
       <div class="footer-logo">
-        <img src="../image/langquang.png" alt="LQ Analytics Logo" height="40" width="auto"/> 
+        <img src="../image/langquang.png" alt="LQ Analytics Logo" height="40" width="auto"/>
       </div>
       <p style="font-size: 0.9rem; line-height: 1.4;">
         Brisbane's leading digital partner for branding, development, and strategic growth.
@@ -260,11 +360,11 @@
       </ul>
     </div>
   </div>
-
   <div style="text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #333; font-size: 0.8rem; color: #888;">
     <p style="margin-bottom: 10px;">This connector is developed and maintained by LangQuang Digital (LQ Analytics)</p>
     © 2026 LangQuang Digital. All rights reserved.
   </div>
 </footer>
+
 </body>
 </html>
